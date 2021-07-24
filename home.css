@@ -1,0 +1,915 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden !important;
+}
+
+.cover {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(imgs/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.main1 {
+    background-color: black;
+    text-align: center;
+    padding: 1% 0%;
+}
+
+.main1 h1 {
+    font-family: 'Sarabun', sans-serif;
+    color: white;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+}
+
+.main2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #e84118; */
+    min-height: 8vh;
+    /* box-shadow: 5px 0px 10px grey; */
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    width: max-content;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    font-size: 22px;
+    /* background-color: yellow; */
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: absolute;
+        right: 0px;
+        height: 84vh;
+        top: 8vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        transform: translateX(100%);
+        /* transition: transform 0.5s ease-in; */
+    }
+    .nav-links li {
+        opacity: 0;
+        /* border: 1px solid white; */
+        padding: 5%;
+    }
+    .burger {
+        display: block;
+    }
+    .container1 #select {
+        margin-top: 12%;
+    }
+    .container1 #select a {
+        font-size: 10px;
+    }
+    footer {
+        font-size: 5px;
+    }
+    footer table tr td a {
+        font-size: 5px;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .main1 {
+        background-color: black;
+        text-align: center;
+        padding: 5% 0%;
+    }
+    .introcontent .top {
+        text-align: center;
+        font-size: 30px !important;
+        width: 90% !important;
+        margin: 0% auto;
+        text-transform: capitalize;
+        font-family: 'Rajdhani', sans-serif;
+        color: white;
+        height: max-content;
+        /* background-color: yellow; */
+    }
+    .introcontent .bot {
+        text-align: center;
+        font-size: 10px !important;
+        width: 90% !important;
+        margin: 1% auto;
+        text-transform: capitalize;
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        word-spacing: 3px;
+        height: max-content;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(50px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    /* background-color: #fff; */
+}
+
+
+/* .introcontent
+{
+    background-color: yellow;
+} */
+
+.introcontent .top {
+    text-align: center;
+    font-size: 50px;
+    width: 60%;
+    margin: 0% auto;
+    text-transform: capitalize;
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    height: max-content;
+}
+
+.introcontent .bot {
+    text-align: center;
+    font-size: 15px;
+    width: 40%;
+    margin: 0% auto;
+    text-transform: capitalize;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    word-spacing: 3px;
+    height: max-content;
+}
+
+.sec2 {
+    height: max-content;
+    background-color: rgb(243, 237, 243);
+}
+
+.sec2 .wel {
+    /* background-color: teal; */
+    padding: 2% 0%;
+    text-align: center;
+}
+
+.sec2 .wel h2 {
+    /* background-color: tomato; */
+    text-transform: capitalize;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 40px;
+}
+
+.well {
+    /* background-color: red !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.well .prog {
+    /* background-color: yellow; */
+    padding: 2%;
+    margin: 0% 2%;
+}
+
+.well .prog .icon {
+    /* background-color: yellowgreen; */
+    text-align: center;
+}
+
+.well .prog .icon i {
+    font-size: 50px;
+}
+
+.well .prog p {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;
+}
+
+.sec3 {
+    height: max-content;
+}
+
+.introsectop,
+.introseccen,
+.introsecbot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 0%;
+}
+
+.introsectop h2 {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+.introseccen p {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.introsecbot .cardone,
+.cardtwo,
+.cardthree {
+    margin: 1% 4%;
+    padding: 1%;
+    /* background-color: red; */
+    height: max-content;
+}
+
+.introsecbot .cardone:hover,
+.cardtwo:hover,
+.cardthree:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.introsecbot .cardone .pic,
+.cardtwo .pic,
+.cardthree .pic {
+    height: 35vh;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.cardcontent {
+    /* background-color: green; */
+    margin: 2% 0% 0% 0%;
+}
+
+.cardcontent h2 {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: capitalize;
+}
+
+.cardcontent p {
+    font-family: 'Nunito', sans-serif;
+    /* text-transform: capitalize; */
+}
+
+.btn {
+    /* background-color: yellowgreen; */
+    padding: 2%;
+}
+
+.btn input {
+    padding: 2% 5%;
+    background-color: #00a8ff;
+    border-radius: 30px;
+    border: 1px solid white;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.btn input:hover {
+    background-color: black;
+    color: #00a8ff;
+    cursor: pointer;
+}
+
+.sec4 {
+    width: 100%;
+    min-height: max-content;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(imgs/img2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sec4 h2 {
+    padding: 2% 0%;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 40px;
+}
+
+.sec4 form {
+    /* background-color: yellow; */
+    width: 100%;
+    padding: 5% 0%;
+}
+
+.sec4 form .line {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sec4 form .n:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+}
+
+.n {
+    display: block;
+    width: 30%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    /* margin-left: 5%; */
+}
+
+.btntwo {
+    /* background-color: yellowgreen; */
+    padding: 2%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btntwo input {
+    padding: 1% 5%;
+    background-color: #00a8ff;
+    border-radius: 30px;
+    border: 1px solid white;
+    color: white;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.btntwo input:hover {
+    background-color: black;
+    color: #00a8ff;
+    cursor: pointer;
+}
+
+.sec5 {
+    width: 100%;
+    min-height: max-content;
+}
+
+.sec5 .nskill {
+    padding: 2% 0%;
+    text-align: center;
+}
+
+.sec5 .nskill h2 {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+.sec5 .nskillcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec5 .nskillcontent .leftcont {
+    width: 50%;
+    background-color: gold;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sec5 .nskillcontent .rightcont {
+    width: 50%;
+    padding: 5%;
+    border: 20px solid gold;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* background-color: #00a8ff; */
+}
+
+.sec5 .nskillcontent .leftcont h4 {
+    /* font-size: 25px; */
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+.sec5 .nskillcontent .leftcont p {
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btnthree {
+    /* background-color: yellowgreen; */
+    padding: 2%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btnthree input {
+    padding: 1% 5%;
+    background-color: #00a8ff;
+    border-radius: 30px;
+    border: 1px solid white;
+    color: white;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.btnthree input:hover {
+    background-color: black;
+    color: #00a8ff;
+    cursor: pointer;
+}
+
+.sec6 {
+    width: 100%;
+    min-height: max-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 5% 0%; */
+    background-color: #f5f6fa;
+    padding: 5% 0%;
+}
+
+.sec6 .livecount:nth-child(1) {
+    background-color: #00a8ff;
+    padding: 3% 0%;
+    width: 20%;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sec6 .livecount:nth-child(2) {
+    background-color: #e84118;
+    padding: 3% 0%;
+    width: 20%;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sec6 .livecount:nth-child(3) {
+    background-color: #4cd137;
+    padding: 3% 0%;
+    width: 20%;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sec6 .livecount p,
+.sec6 .livecount h3 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.foot {
+    height: max-content;
+    width: 100%;
+    background-color: #353b48;
+}
+
+.foot .upper {
+    width: 100%;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0%;
+}
+
+.foot .upper .uppercontent {
+    width: 20%;
+    /* border-bottom: 1px solid white; */
+    color: white;
+    height: max-content;
+}
+
+.foot .upper .uppercontent .logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    width: 100%;
+}
+
+.foot .upper .uppercontent p {
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+}
+
+.foot .upper .uppercontent ul .head {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    /* list-style: none; */
+    margin-bottom: 2%;
+}
+
+.foot .upper .uppercontent ul a {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.foot .upper .uppercontent ul a :hover {
+    color: #00a8ff;
+}
+
+.foot .upper .uppercontent ul li {
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    text-transform: capitalize;
+}
+
+.foot .lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0%;
+}
+
+.foot .lower p {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    width: 70%;
+}
+
+@media screen and (max-width:1367px) {
+    .well .prog p {
+        font-size: 15px;
+        text-transform: capitalize;
+        font-family: 'Nunito', sans-serif;
+    }
+    .cardcontent h2 {
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: capitalize;
+        font-size: 15px;
+    }
+    .cardcontent p {
+        font-family: 'Nunito', sans-serif;
+        /* text-transform: capitalize; */
+        font-size: 10px;
+    }
+    .introsecbot .cardone .pic,
+    .cardtwo .pic,
+    .cardthree .pic {
+        height: 15vh;
+        width: 100%;
+    }
+    .sec5 .nskillcontent .leftcont h4 {
+        /* font-size: 25px; */
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .sec5 .nskillcontent .leftcont p {
+        text-align: left;
+        font-family: 'Nunito', sans-serif;
+        font-size: 12px;
+    }
+    .foot .lower p {
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        font-size: 12px;
+        /* background-color: red; */
+    }
+}
+
+@media screen and (max-width:376px) {
+    .sec2 .wel h2 {
+        /* background-color: tomato; */
+        text-transform: capitalize;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 20px;
+    }
+    .well .prog p {
+        font-size: 10px;
+        text-transform: capitalize;
+        font-family: 'Nunito', sans-serif;
+    }
+    .well .prog .icon i {
+        font-size: 30px;
+    }
+    .introsecbot {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1% 0%;
+    }
+    .introsectop h2 {
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .introseccen p {
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        font-size: 10px;
+    }
+    .introsecbot .cardone,
+    .cardtwo,
+    .cardthree {
+        margin: 5% auto;
+        padding: 1%;
+        /* background-color: red; */
+        height: max-content;
+        width: 70%;
+    }
+    F .cardcontent h2 {
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: capitalize;
+        font-size: 15px;
+    }
+    .cardcontent p {
+        font-family: 'Nunito', sans-serif;
+        /* text-transform: capitalize; */
+        font-size: 10px;
+    }
+    .introsecbot .cardone .pic,
+    .cardtwo .pic,
+    .cardthree .pic {
+        height: 25vh;
+        width: 100%;
+    }
+    .sec4 h2 {
+        padding: 5% 0% 0% 0%;
+        text-transform: capitalize;
+        text-align: center;
+        color: white;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 18px;
+    }
+    .sec4 form .line {
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .n {
+        margin: 5% auto;
+        display: block;
+        width: 80%;
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: white;
+        background-color: transparent;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        /* margin-left: 5%; */
+    }
+    .btntwo input {
+        padding: 1% 10%;
+        background-color: #00a8ff;
+        border-radius: 30px;
+        border: 1px solid white;
+        color: white;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-family: 'Rajdhani', sans-serif;
+    }
+    .sec5 {
+        width: 100%;
+        min-height: max-content;
+    }
+    .sec5 .nskill {
+        padding: 2% 0%;
+        text-align: center;
+    }
+    .sec5 .nskill h2 {
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .sec5 .nskillcontent {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+    .sec5 .nskillcontent .leftcont {
+        width: 60%;
+        margin: 0% auto;
+        background-color: gold;
+        padding: 5%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .sec5 .nskillcontent .rightcont {
+        width: 80%;
+        margin: 0% auto;
+        padding: 5%;
+        border: 20px solid gold;
+        box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* background-color: #00a8ff; */
+    }
+    .sec5 .nskillcontent .leftcont h4 {
+        /* font-size: 25px; */
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .sec5 .nskillcontent .leftcont p {
+        text-align: left;
+        font-family: 'Nunito', sans-serif;
+        font-size: 10px;
+    }
+    .btnthree input {
+        padding: 1% 10%;
+        background-color: #00a8ff;
+        border-radius: 30px;
+        border: 1px solid white;
+        color: white;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-family: 'Rajdhani', sans-serif;
+    }
+    .sec6 {
+        width: 100%;
+        min-height: max-content;
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+        /* margin: 5% 0%; */
+        background-color: #f5f6fa;
+        padding: 5% 0%;
+    }
+    .sec6 .livecount:nth-child(1) {
+        background-color: #00a8ff;
+        padding: 3% 0%;
+        width: 70%;
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 5% auto;
+    }
+    .sec6 .livecount:nth-child(2) {
+        background-color: #e84118;
+        padding: 3% 0%;
+        width: 70%;
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 5% auto;
+    }
+    .sec6 .livecount:nth-child(3) {
+        background-color: #4cd137;
+        padding: 3% 0%;
+        width: 70%;
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 5% auto;
+    }
+    .sec6 .livecount p,
+    .sec6 .livecount h3 {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Rajdhani', sans-serif;
+    }
+    .foot .upper {
+        width: 100%;
+        border-bottom: 1px solid white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5% 0%;
+    }
+    .foot .upper .uppercontent {
+        width: 20%;
+        /* border-bottom: 1px solid white; */
+        color: white;
+        height: max-content;
+    }
+    .foot .upper .uppercontent ul .head {
+        font-weight: bold;
+        text-transform: capitalize;
+        font-family: 'Rajdhani', sans-serif;
+        text-decoration: none;
+        font-size: 12px;
+        /* list-style: none; */
+        margin-bottom: 2%;
+    }
+    .foot .upper .uppercontent ul a {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-decoration: none;
+        /* font-size: 10px; */
+    }
+    .foot .upper .uppercontent ul a :hover {
+        color: #00a8ff;
+    }
+    .foot .upper .uppercontent ul li {
+        list-style: none;
+        font-family: 'Nunito', sans-serif;
+        text-transform: capitalize;
+        font-size: 8px;
+        margin: 5% 0%;
+    }
+    .foot .lower {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2% 0%;
+    }
+    .foot .lower p {
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        font-size: 8px;
+        /* background-color: red; */
+    }
+}
